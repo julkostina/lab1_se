@@ -1,0 +1,117 @@
+/* COCOMO Calculator - Windows Style Interface */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.window {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.window-content {
+    padding: 10px;
+    display: flex;
+    gap: 20px;
+    background: linear-gradient(to right, #7b9eda, #0099ff);
+    border-radius: 10px;
+    color: white;
+}
+
+.left-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.right-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 5px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-weight: normal;
+}
+
+select, input[type="number"] {
+    background: white;
+    border: 2px inset #c0c0c0;
+    padding: 2px 4px;
+    font-family: 'Segoe UI', sans-serif;
+    height: 20px;
+}
+
+select:focus, input[type="number"]:focus {
+    outline: 1px dotted #000;
+    outline-offset: -2px;
+}
+
+.calculate-btn {
+    background: #ffffff;
+    padding: 4px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #2c07b5;
+    color: #000000;
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.calculate-btn:hover {
+    background: #c7e9fd;
+    color: white;
+}
+
+.calculate-btn:active {
+    border: 2px inset #c0c0c0;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0;
+}
+
+.result-item label {
+    font-weight: normal;
+}
+
+.result-item span {
+    min-width: 60px;
+    text-align: right;
+    font-weight: normal;
+}
+
+.result-item .unit {
+    min-width: auto;
+    font-size: 12px;
+    opacity: 0.9;
+    margin-left: 3px;
+}
+
+.error-message {
+    background: #ffcccc;
+    border: 1px solid #ff0000;
+    color: #cc0000;
+    padding: 4px 6px;
+    margin-top: 5px;
+    display: none;
+}

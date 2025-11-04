@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COCOMO Model I:Basic</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="window">
+        <div class="window-content">
+            <div class="left-panel">
+                <div class="form-group">
+                    <label for="project-type">Тип проєкта:</label>
+                    <select id="project-type">
+                        <option value="organic">Organic</option>
+                        <option value="semi-detached">Semi-detached</option>
+                        <option value="embedded">Embedded</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="kloc">Кількість рядків коду (тисяч):</label>
+                    <input type="number" id="kloc" min="0" step="0.1" placeholder="KLOC">
+                </div>
+
+                <button id="calculate-btn" class="calculate-btn">Розрахувати!</button>
+            </div>
+
+            <div class="right-panel">
+                <div class="result-item">
+                    <label>Трудоємність:</label>
+                    <span id="effort-result"></span> <span class="unit">чол-міс</span>
+                </div>
+
+                <div class="result-item">
+                    <label>Тривалість:</label>
+                    <span id="time-result"></span> <span class="unit">міс</span>
+                </div>
+
+                <div class="result-item">
+                    <label>Розробників:</label>
+                    <span id="team-result"></span> <span class="unit">осіб</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
